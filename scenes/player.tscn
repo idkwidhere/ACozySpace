@@ -29,11 +29,5 @@ texture = ExtResource("1_5eria")
 [node name="InteractArea" type="CollisionShape2D" parent="PlayerInteractArea"]
 shape = SubResource("CircleShape2D_nwld1")
 
-[node name="MissionPanel" type="ColorRect" parent="."]
-offset_left = 13.0
-offset_top = -51.6667
-offset_right = 53.0
-offset_bottom = -11.6667
-
 [connection signal="body_entered" from="PlayerInteractArea" to="." method="_on_player_interact_area_body_entered"]
 [connection signal="body_exited" from="PlayerInteractArea" to="." method="_on_player_interact_area_body_exited"]

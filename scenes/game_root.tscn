@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwmoacp2bwofm"]
+[gd_scene load_steps=9 format=3 uid="uid://cwmoacp2bwofm"]
 
 [ext_resource type="Texture2D" uid="uid://c23kmfv0u388d" path="res://assets/ship_tilemap.png" id="1_3gnml"]
+[ext_resource type="Script" path="res://scripts/game_root.gd" id="1_jpslm"]
 [ext_resource type="PackedScene" uid="uid://djxhn8hp7plr5" path="res://scenes/player.tscn" id="2_7wcio"]
 [ext_resource type="PackedScene" uid="uid://c46vc6rhsasya" path="res://scenes/terminal.tscn" id="3_fla2g"]
+[ext_resource type="PackedScene" uid="uid://dbs4l6tkrawt8" path="res://scenes/player_menu.tscn" id="5_rfi7h"]
+[ext_resource type="PackedScene" uid="uid://d2p4hy8pv8jj3" path="res://scenes/terminal_menu.tscn" id="6_vk6hk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_poxnn"]
 texture = ExtResource("1_3gnml")
@@ -106,6 +109,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_poxnn")
 
 [node name="game_root" type="Node"]
+script = ExtResource("1_jpslm")
 
 [node name="Art" type="Node" parent="."]
 
@@ -120,3 +124,10 @@ position = Vector2(199, -669)
 
 [node name="Player" parent="." instance=ExtResource("2_7wcio")]
 position = Vector2(33, -47)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="player_menu" parent="UI" instance=ExtResource("5_rfi7h")]
+visible = false
+
+[node name="terminal_menu" parent="UI" instance=ExtResource("6_vk6hk")]

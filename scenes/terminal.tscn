@@ -11,6 +11,7 @@ size = Vector2(12, 16)
 radius = 18.3364
 
 [node name="Terminal" type="StaticBody2D"]
+position = Vector2(0, -48)
 scale = Vector2(3, 3)
 script = ExtResource("1_sl2lk")
 

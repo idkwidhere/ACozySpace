@@ -4,21 +4,24 @@ class_name Player
 const SPEED = 300.0
 var accel = 50
 @onready var player_sprite = $PlayerSprite
-@onready var mission_panel = $MissionPanel
-
-# player signals
 
 
 #ui stuff??
-var missions_open = false
-
+var menu_open = false
+var interact_type = null
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready():
+	pass
+
+
 func _process(delta):
-	if Input.is_action_just_pressed("e") and missions_open == false:
-		mission_panel.visible = true
+	if Input.is_action_just_pressed("tab") and menu_open == false:
+		Signals.emit_signal("toggle_player_menu")
+	if Input.is_action_just_pressed("e"):
+		Signals.emit_signal("player_interact", interact_type)
 
 
 
@@ -45,18 +48,13 @@ func _physics_process(delta):
 	#print(velocity)
 
 	move_and_slide()
-	
 
 func _on_player_interact_area_body_entered(body):
 	if body.has_method("_open_missions"):
-		print("entered terminal")
-		missions_open = true
+		interact_type = "terminal"
 
 
 func _on_player_interact_area_body_exited(body):
 	if body.has_method("_open_missions"):
-		print("left terminal")
-		if Input.is_action_just_pressed("e"):
-			print("closed")
-			mission_panel.visible = false
-		mission_panel.visible = false
+		interact_type = null
+		Signals.emit_signal("player_interact", interact_type)

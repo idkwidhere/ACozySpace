@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dbs4l6tkrawt8"]
+
+[node name="player_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabBar" type="TabBar" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 323.0
+offset_bottom = 46.0
+tab_count = 4
+tab_0/title = "Player"
+tab_1/title = "Ship"
+tab_2/title = "Missions"
+tab_3/title = "Settings"
