@@ -1,7 +1,6 @@
 extends StaticBody2D
 
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -15,8 +14,11 @@ func _process(delta):
 func _on_interact_area_body_entered(body):
 	if body is Player:
 		$Interact.visible = true
-		
+
 
 func _on_interact_area_body_exited(body):
 	if body is Player:
 		$Interact.visible = false
+
+func _open_missions():
+	pass

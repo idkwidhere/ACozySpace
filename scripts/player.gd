@@ -4,13 +4,22 @@ class_name Player
 const SPEED = 300.0
 var accel = 50
 @onready var player_sprite = $PlayerSprite
+@onready var mission_panel = $MissionPanel
 
 # player signals
-signal player_interact
+
+
+#ui stuff??
+var missions_open = false
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func _process(delta):
+	if Input.is_action_just_pressed("e") and missions_open == false:
+		mission_panel.visible = true
+
 
 
 func _physics_process(delta):
@@ -33,11 +42,21 @@ func _physics_process(delta):
 		global_rotation_degrees = 90
 	if velocity.x < 0:
 		global_rotation_degrees = -90
-	print(velocity)
+	#print(velocity)
 
 	move_and_slide()
+	
 
-	# Player interact signal
-	if Input.is_action_just_pressed("e"):
-		player_interact.emit()
+func _on_player_interact_area_body_entered(body):
+	if body.has_method("_open_missions"):
+		print("entered terminal")
+		missions_open = true
 
+
+func _on_player_interact_area_body_exited(body):
+	if body.has_method("_open_missions"):
+		print("left terminal")
+		if Input.is_action_just_pressed("e"):
+			print("closed")
+			mission_panel.visible = false
+		mission_panel.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://djxhn8hp7plr5"]
+[gd_scene load_steps=5 format=3 uid="uid://djxhn8hp7plr5"]
 
 [ext_resource type="Texture2D" uid="uid://do60axlkuou5" path="res://assets/player.png" id="1_5eria"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_acaaa"]
@@ -6,6 +6,9 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hld28"]
 radius = 7.0
 height = 22.6667
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nwld1"]
+radius = 20.0028
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(3, 3)
@@ -20,3 +23,17 @@ shape = SubResource("CapsuleShape2D_hld28")
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_5eria")
+
+[node name="PlayerInteractArea" type="Area2D" parent="."]
+
+[node name="InteractArea" type="CollisionShape2D" parent="PlayerInteractArea"]
+shape = SubResource("CircleShape2D_nwld1")
+
+[node name="MissionPanel" type="ColorRect" parent="."]
+offset_left = 13.0
+offset_top = -51.6667
+offset_right = 53.0
+offset_bottom = -11.6667
+
+[connection signal="body_entered" from="PlayerInteractArea" to="." method="_on_player_interact_area_body_entered"]
+[connection signal="body_exited" from="PlayerInteractArea" to="." method="_on_player_interact_area_body_exited"]
