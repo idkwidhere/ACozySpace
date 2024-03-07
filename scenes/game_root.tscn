@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwmoacp2bwofm"]
+[gd_scene load_steps=10 format=3 uid="uid://cwmoacp2bwofm"]
 
 [ext_resource type="Texture2D" uid="uid://c23kmfv0u388d" path="res://assets/ship_tilemap.png" id="1_3gnml"]
 [ext_resource type="Script" path="res://scripts/game_root.gd" id="1_jpslm"]
 [ext_resource type="PackedScene" uid="uid://djxhn8hp7plr5" path="res://scenes/player.tscn" id="2_7wcio"]
+[ext_resource type="Texture2D" uid="uid://ciw6vuci7qu8b" path="res://assets/pixelart_starfield_corona.png" id="2_ba5gg"]
 [ext_resource type="PackedScene" uid="uid://c46vc6rhsasya" path="res://scenes/terminal.tscn" id="3_fla2g"]
 [ext_resource type="PackedScene" uid="uid://dbs4l6tkrawt8" path="res://scenes/player_menu.tscn" id="5_rfi7h"]
 [ext_resource type="PackedScene" uid="uid://d2p4hy8pv8jj3" path="res://scenes/terminal_menu.tscn" id="6_vk6hk"]
@@ -113,6 +114,16 @@ script = ExtResource("1_jpslm")
 
 [node name="Art" type="Node" parent="."]
 
+[node name="SpaceBackground" type="TextureRect" parent="Art"]
+offset_left = -1374.0
+offset_top = -1766.0
+offset_right = 1675.0
+offset_bottom = 1516.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ba5gg")
+stretch_mode = 1
+
 [node name="Ship" type="TileMap" parent="Art"]
 scale = Vector2(5, 5)
 tile_set = SubResource("TileSet_11ywa")
@@ -131,3 +142,4 @@ position = Vector2(33, -47)
 visible = false
 
 [node name="terminal_menu" parent="UI" instance=ExtResource("6_vk6hk")]
+visible = false
