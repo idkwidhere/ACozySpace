@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://c46vc6rhsasya"]
+
+[ext_resource type="Texture2D" uid="uid://c7kl4i6edmy68" path="res://assets/terminal.png" id="1_b3roj"]
+[ext_resource type="Script" path="res://scripts/terminal.gd" id="1_sl2lk"]
+[ext_resource type="Texture2D" uid="uid://dafag7bu3ma8j" path="res://assets/interact.png" id="2_vdbul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vq4jj"]
+size = Vector2(12, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_belwh"]
+radius = 18.3364
+
+[node name="Terminal" type="StaticBody2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_sl2lk")
+
+[node name="TerminalSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_b3roj")
+
+[node name="TerminalCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_vq4jj")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="InteractCollision" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(0, 3.33333)
+shape = SubResource("CircleShape2D_belwh")
+
+[node name="Interact" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(12.3333, -11.3333)
+texture = ExtResource("2_vdbul")
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]
