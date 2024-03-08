@@ -20,5 +20,3 @@ func _on_interact_area_body_exited(body):
 	if body is Player:
 		$Interact.visible = false
 
-func _open_missions():
-	pass
