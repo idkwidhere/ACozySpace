@@ -50,11 +50,11 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_player_interact_area_body_entered(body):
-	if body.has_method("_open_missions"):
+	if body.has_method("_is_terminal"):
 		interact_type = "terminal"
 
 
 func _on_player_interact_area_body_exited(body):
-	if body.has_method("_open_missions"):
+	if body.has_method("_is_terminal"):
 		interact_type = null
 		Signals.emit_signal("player_interact", interact_type)
