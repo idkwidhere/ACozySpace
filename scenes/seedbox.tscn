@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2mmp5750hudk"]
+
+[ext_resource type="Texture2D" uid="uid://cc2dvn0xo2q53" path="res://assets/seedbox.png" id="1_c1uxf"]
+[ext_resource type="Script" path="res://scripts/seedbox.gd" id="1_sr1yg"]
+[ext_resource type="Texture2D" uid="uid://dafag7bu3ma8j" path="res://assets/interact.png" id="2_5x74d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3viy"]
+size = Vector2(26, 15.6667)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ch7c1"]
+radius = 20.3361
+
+[node name="Seedbox" type="StaticBody2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_sr1yg")
+
+[node name="SeedboxSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_c1uxf")
+
+[node name="SeedboxCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.16667)
+shape = SubResource("RectangleShape2D_o3viy")
+
+[node name="InteractArea" type="Area2D" parent="."]
+position = Vector2(0, 5)
+
+[node name="InteractCollision" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_ch7c1")
+
+[node name="Interact" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(12.3333, -6.3333)
+texture = ExtResource("2_5x74d")
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]

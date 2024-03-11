@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwmoacp2bwofm"]
+[gd_scene load_steps=12 format=3 uid="uid://cwmoacp2bwofm"]
 
 [ext_resource type="Texture2D" uid="uid://c23kmfv0u388d" path="res://assets/ship_tilemap.png" id="1_3gnml"]
 [ext_resource type="Script" path="res://scripts/game_root.gd" id="1_jpslm"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c46vc6rhsasya" path="res://scenes/terminal.tscn" id="3_fla2g"]
 [ext_resource type="PackedScene" uid="uid://dbs4l6tkrawt8" path="res://scenes/player_menu.tscn" id="5_rfi7h"]
 [ext_resource type="PackedScene" uid="uid://d2p4hy8pv8jj3" path="res://scenes/terminal_menu.tscn" id="6_vk6hk"]
+[ext_resource type="PackedScene" uid="uid://d23uam8mc25bb" path="res://scenes/small_planter.tscn" id="8_a1pjf"]
+[ext_resource type="PackedScene" uid="uid://d2mmp5750hudk" path="res://scenes/seedbox.tscn" id="9_6d1kt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_poxnn"]
 texture = ExtResource("1_3gnml")
@@ -143,3 +145,14 @@ visible = false
 
 [node name="terminal_menu" parent="UI" instance=ExtResource("6_vk6hk")]
 visible = false
+
+[node name="RightRoom" type="Node" parent="."]
+
+[node name="SmallPlanter" parent="RightRoom" instance=ExtResource("8_a1pjf")]
+position = Vector2(821, -493)
+
+[node name="SmallPlanter2" parent="RightRoom" instance=ExtResource("8_a1pjf")]
+position = Vector2(1099, -493)
+
+[node name="Seedbox" parent="." instance=ExtResource("9_6d1kt")]
+position = Vector2(960, -498)

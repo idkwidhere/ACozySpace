@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d23uam8mc25bb"]
+
+[ext_resource type="Texture2D" uid="uid://bqmdvpwpaqaku" path="res://assets/smallplanter.png" id="1_8oi0a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nwiqa"]
+size = Vector2(64, 22)
+
+[node name="SmallPlanter" type="StaticBody2D"]
+scale = Vector2(3, 3)
+
+[node name="SmallPlanterSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_8oi0a")
+
+[node name="SmallPlanterCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_nwiqa")
