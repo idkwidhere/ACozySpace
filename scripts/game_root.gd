@@ -17,7 +17,7 @@ func _ready():
 	Signals.connect("player_interact", interact)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if terminal_menu_open == false:
 		terminal_menu.visible = false
 

@@ -17,7 +17,7 @@ func _ready():
 	pass
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("tab") and menu_open == false:
 		Signals.emit_signal("toggle_player_menu")
 	if Input.is_action_just_pressed("e"):
@@ -25,7 +25,7 @@ func _process(delta):
 
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 
 
 	# Get the input direction and handle the movement/deceleration.
