@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://hbt3bv8xlnaw"]
+
+[ext_resource type="Texture2D" uid="uid://cvvhpxt08vba" path="res://assets/potato/potato_sprout.png" id="1_shec2"]
+[ext_resource type="Script" path="res://scripts/potato_plant.gd" id="2_jduif"]
+
+[node name="PotatoPlant" type="Sprite2D"]
+position = Vector2(0, -8)
+texture = ExtResource("1_shec2")
+script = ExtResource("2_jduif")
