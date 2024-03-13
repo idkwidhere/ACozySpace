@@ -52,9 +52,15 @@ func _physics_process(_delta):
 func _on_player_interact_area_body_entered(body):
 	if body.has_method("_is_terminal"):
 		interact_type = "terminal"
+	if body.has_method("_is_shipping_box"):
+		interact_type = "shipping_box"
 
 
 func _on_player_interact_area_body_exited(body):
 	if body.has_method("_is_terminal"):
 		interact_type = null
-		Signals.emit_signal("player_interact", interact_type)
+	if body.has_method("_is_shipping_box"):
+		interact_type = null
+	
+	Signals.emit_signal("player_interact", interact_type)
+	

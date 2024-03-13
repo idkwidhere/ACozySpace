@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwmoacp2bwofm"]
+[gd_scene load_steps=14 format=3 uid="uid://cwmoacp2bwofm"]
 
 [ext_resource type="Texture2D" uid="uid://c23kmfv0u388d" path="res://assets/ship_tilemap.png" id="1_3gnml"]
 [ext_resource type="Script" path="res://scripts/game_root.gd" id="1_jpslm"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dbs4l6tkrawt8" path="res://scenes/player_menu.tscn" id="5_rfi7h"]
 [ext_resource type="PackedScene" uid="uid://d2p4hy8pv8jj3" path="res://scenes/terminal_menu.tscn" id="6_vk6hk"]
 [ext_resource type="PackedScene" uid="uid://d23uam8mc25bb" path="res://scenes/small_planter.tscn" id="8_a1pjf"]
+[ext_resource type="PackedScene" uid="uid://yrxjhuetsnn2" path="res://scenes/shipping_menu.tscn" id="8_ju65c"]
 [ext_resource type="PackedScene" uid="uid://d2mmp5750hudk" path="res://scenes/seedbox.tscn" id="9_6d1kt"]
+[ext_resource type="PackedScene" uid="uid://u4nriey12bum" path="res://scenes/shipping_box.tscn" id="10_18x06"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_poxnn"]
 texture = ExtResource("1_3gnml")
@@ -146,6 +148,9 @@ visible = false
 [node name="terminal_menu" parent="UI" instance=ExtResource("6_vk6hk")]
 visible = false
 
+[node name="shipping_menu" parent="UI" instance=ExtResource("8_ju65c")]
+visible = false
+
 [node name="RightRoom" type="Node" parent="."]
 
 [node name="SmallPlanter" parent="RightRoom" instance=ExtResource("8_a1pjf")]
@@ -159,3 +164,6 @@ position = Vector2(960, -498)
 [node name="Music" type="AudioStreamPlayer2D" parent="Audio"]
 autoplay = true
 bus = &"Music"
+
+[node name="ShippingBox" parent="." instance=ExtResource("10_18x06")]
+position = Vector2(49, -662)

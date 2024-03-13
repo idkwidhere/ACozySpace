@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://u4nriey12bum"]
+
+[ext_resource type="Script" path="res://scripts/shipping_box.gd" id="1_5ti4y"]
+[ext_resource type="Texture2D" uid="uid://t2b4lb3kj0uy" path="res://assets/shipping_box.png" id="1_7r2n6"]
+[ext_resource type="Texture2D" uid="uid://dafag7bu3ma8j" path="res://assets/interact.png" id="2_vgl2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcgb1"]
+size = Vector2(40, 16.4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_whvec"]
+radius = 26.3354
+
+[node name="ShippingBox" type="StaticBody2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_5ti4y")
+
+[node name="ShippingBoxSprite" type="Sprite2D" parent="."]
+scale = Vector2(1, 1)
+texture = ExtResource("1_7r2n6")
+
+[node name="ShippingBoxCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-1.52588e-06, 5.4)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_gcgb1")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="Interact" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(0, 5.33333)
+shape = SubResource("CircleShape2D_whvec")
+
+[node name="Interact" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(12.3333, -11.3333)
+texture = ExtResource("2_vgl2q")
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]
