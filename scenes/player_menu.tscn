@@ -26,10 +26,8 @@ offset_right = -274.0
 offset_bottom = -202.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 1
 
 [node name="Inventory" type="Panel" parent="menu_tabs"]
-visible = false
 layout_mode = 2
 
 [node name="InventoryGrid" type="GridContainer" parent="menu_tabs/Inventory"]
@@ -46,6 +44,7 @@ columns = 6
 script = ExtResource("1_4j56u")
 
 [node name="Ship" type="Panel" parent="menu_tabs"]
+visible = false
 layout_mode = 2
 
 [node name="Contracts" type="Panel" parent="menu_tabs"]

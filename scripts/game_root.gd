@@ -38,7 +38,7 @@ func interact(type):
 		shipping_menu.visible = false
 		shipping_menu_open = false
 
-	
+
 func toggle_player_menu():
 	if player_menu_open == false:
 		player_menu.visible = true
