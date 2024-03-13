@@ -11,18 +11,14 @@ var menu_open = false
 var interact_type = null
 
 # inventory stuff hopefully
-var gold
 
-var player_invetory = [
-	{name: "gold", "quantity": 0},
-]
+var player_invetory = []
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
-	for item in player_invetory:
-		print(item)
+	pass
 
 
 func _process(_delta):
@@ -62,7 +58,8 @@ func _on_player_interact_area_body_entered(body):
 		interact_type = "terminal"
 	if body.has_method("_is_shipping_box"):
 		interact_type = "shipping_box"
-
+	if body.has_method("_is_small_planter"):
+		interact_type = "plant"
 
 func _on_player_interact_area_body_exited(body):
 	if body.has_method("_is_terminal"):

@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://d23uam8mc25bb"]
+[gd_scene load_steps=6 format=3 uid="uid://d23uam8mc25bb"]
 
 [ext_resource type="Script" path="res://scripts/small_planter.gd" id="1_2tbv3"]
 [ext_resource type="Texture2D" uid="uid://bqmdvpwpaqaku" path="res://assets/smallplanter.png" id="1_8oi0a"]
+[ext_resource type="Texture2D" uid="uid://dafag7bu3ma8j" path="res://assets/interact.png" id="3_vtmo4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwiqa"]
 size = Vector2(64, 22)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjtf3"]
+radius = 17.6667
+height = 80.0
 
 [node name="SmallPlanter" type="StaticBody2D"]
 scale = Vector2(3, 3)
@@ -82,3 +87,18 @@ scale = Vector2(3, 3)
 [node name="Seed16" type="Marker2D" parent="Seeds"]
 position = Vector2(24.6667, 4.66667)
 scale = Vector2(3, 3)
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="Interact" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(0, 3.66667)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_bjtf3")
+
+[node name="Interact" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(12.3333, -6.3333)
+texture = ExtResource("3_vtmo4")
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]

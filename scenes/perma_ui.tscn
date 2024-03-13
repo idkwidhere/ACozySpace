@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://nwxyhqii78qb"]
+
+[node name="PermaUI" type="CanvasLayer"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 113.0
+offset_top = -124.0
+offset_right = -106.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
