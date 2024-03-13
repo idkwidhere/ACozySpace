@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bplpygnngsh88"
-path="res://.godot/imported/seed_capsule.png-f2064928ab86233faeb3a7a30af8fbd1.ctex"
+path="res://.godot/imported/seed_capsule.png-9d4f6211bc059a6e957dc1c6b2e397e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/seed_capsule.png"
-dest_files=["res://.godot/imported/seed_capsule.png-f2064928ab86233faeb3a7a30af8fbd1.ctex"]
+source_file="res://assets/potato/seed_capsule.png"
+dest_files=["res://.godot/imported/seed_capsule.png-9d4f6211bc059a6e957dc1c6b2e397e0.ctex"]
 
 [params]
 

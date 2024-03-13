@@ -26,26 +26,34 @@ offset_right = -274.0
 offset_bottom = -202.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 1
 
 [node name="Inventory" type="Panel" parent="menu_tabs"]
-visible = false
 layout_mode = 2
-
-[node name="InventoryGrid" type="GridContainer" parent="menu_tabs/Inventory"]
-layout_mode = 2
-anchor_right = 19.2
-anchor_bottom = 9.6
-offset_left = 20.0
-offset_top = 150.0
-offset_right = -16.0
-offset_bottom = -13.0
-grow_horizontal = 2
-grow_vertical = 2
-columns = 6
 script = ExtResource("1_4j56u")
 
+[node name="InventoryGrid" type="GridContainer" parent="menu_tabs/Inventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Panel" type="Panel" parent="menu_tabs/Inventory/InventoryGrid"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="menu_tabs/Inventory"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 35.0
+offset_right = 206.0
+offset_bottom = 58.0
+text = "Nothing to see really..."
+
 [node name="Ship" type="Panel" parent="menu_tabs"]
+visible = false
 layout_mode = 2
 
 [node name="Contracts" type="Panel" parent="menu_tabs"]

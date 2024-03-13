@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d23uam8mc25bb"]
+[gd_scene load_steps=4 format=3 uid="uid://d23uam8mc25bb"]
 
 [ext_resource type="Script" path="res://scripts/small_planter.gd" id="1_2tbv3"]
 [ext_resource type="Texture2D" uid="uid://bqmdvpwpaqaku" path="res://assets/smallplanter.png" id="1_8oi0a"]
-[ext_resource type="PackedScene" uid="uid://hbt3bv8xlnaw" path="res://scenes/plants/potato_plant.tscn" id="3_itwg5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwiqa"]
 size = Vector2(64, 22)
@@ -23,10 +22,6 @@ shape = SubResource("RectangleShape2D_nwiqa")
 [node name="Seed1" type="Marker2D" parent="Seeds"]
 position = Vector2(-24.3333, -2.33333)
 scale = Vector2(3, 3)
-
-[node name="PotatoPlant" parent="Seeds/Seed1" instance=ExtResource("3_itwg5")]
-position = Vector2(0.111112, -2.22222)
-scale = Vector2(0.333333, 0.333333)
 
 [node name="Seed2" type="Marker2D" parent="Seeds"]
 position = Vector2(-17.3333, -2.33333)

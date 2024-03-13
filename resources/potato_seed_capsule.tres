@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dst101nekjj5g"]
+
+[ext_resource type="Texture2D" uid="uid://bplpygnngsh88" path="res://assets/potato/seed_capsule.png" id="1_a64l4"]
+[ext_resource type="Script" path="res://scripts/ItemData.gd" id="2_nki4g"]
+
+[resource]
+script = ExtResource("2_nki4g")
+type = 0
+name = "Potato Seeds"
+item_description = "For safe keeping!"
+item_texture = ExtResource("1_a64l4")

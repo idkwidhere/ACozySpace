@@ -15,12 +15,10 @@ scale = Vector2(3, 3)
 script = ExtResource("1_5ti4y")
 
 [node name="ShippingBoxSprite" type="Sprite2D" parent="."]
-scale = Vector2(1, 1)
 texture = ExtResource("1_7r2n6")
 
 [node name="ShippingBoxCollision" type="CollisionShape2D" parent="."]
 position = Vector2(-1.52588e-06, 5.4)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gcgb1")
 
 [node name="InteractArea" type="Area2D" parent="."]
