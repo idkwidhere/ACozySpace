@@ -153,3 +153,9 @@ position = Vector2(797, -491)
 
 [node name="Seedbox" parent="." instance=ExtResource("9_6d1kt")]
 position = Vector2(960, -498)
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Audio"]
+autoplay = true
+bus = &"Music"
