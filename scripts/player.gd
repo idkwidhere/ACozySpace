@@ -10,11 +10,19 @@ var accel = 50
 var menu_open = false
 var interact_type = null
 
+# inventory stuff hopefully
+var gold
+
+var player_invetory = [
+	{name: "gold", "quantity": 0},
+]
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
-	pass
+	for item in player_invetory:
+		print(item)
 
 
 func _process(_delta):

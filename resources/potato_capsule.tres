@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Seed_Capsule" load_steps=3 format=3 uid="uid://bj5kylnsixwje"]
+
+[ext_resource type="Script" path="res://scripts/seed_capsule.gd" id="1_b4b46"]
+[ext_resource type="Texture2D" uid="uid://bplpygnngsh88" path="res://assets/seed_capsule.png" id="2_2qobm"]
+
+[resource]
+script = ExtResource("1_b4b46")
+type = "potato"
+texture = ExtResource("2_2qobm")
