@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djxhn8hp7plr5"]
+[gd_scene load_steps=6 format=3 uid="uid://djxhn8hp7plr5"]
 
 [ext_resource type="Texture2D" uid="uid://do60axlkuou5" path="res://assets/player.png" id="1_5eria"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_acaaa"]
+[ext_resource type="Resource" uid="uid://ioxqeq0quyah" path="res://inventory/player_inventory.tres" id="2_qqfov"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hld28"]
 radius = 7.0
@@ -13,6 +14,7 @@ radius = 20.0028
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_acaaa")
+inventory = ExtResource("2_qqfov")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.666667)

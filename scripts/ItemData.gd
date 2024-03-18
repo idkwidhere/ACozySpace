@@ -7,6 +7,7 @@ extends Resource
 enum Type {SEED_CAPSULE, CROP, TOOL, MAIN}
 
 @export var type: Type
+@export var stackable: bool = false
 @export var name: String
 @export_multiline var item_description: String
-@export var item_texture : Texture2D
+@export var item_texture : AtlasTexture

@@ -1,11 +1,18 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dst101nekjj5g"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dst101nekjj5g"]
 
-[ext_resource type="Texture2D" uid="uid://bplpygnngsh88" path="res://assets/potato/seed_capsule.png" id="1_a64l4"]
 [ext_resource type="Script" path="res://scripts/ItemData.gd" id="2_nki4g"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mxqvw"]
+load_path = "res://.godot/imported/seed_capsule_atlas.png-2d7b2ed0ff1bb7313a7b0a309372f67f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kb7f"]
+atlas = SubResource("CompressedTexture2D_mxqvw")
+region = Rect2(0, 0, 16, 16)
 
 [resource]
 script = ExtResource("2_nki4g")
 type = 0
+stackable = true
 name = "Potato Seeds"
 item_description = "For safe keeping!"
-item_texture = ExtResource("1_a64l4")
+item_texture = SubResource("AtlasTexture_6kb7f")

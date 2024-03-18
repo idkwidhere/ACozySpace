@@ -4,6 +4,7 @@ extends Node
 @onready var player_menu = $UI/player_menu
 @onready var terminal_menu = $UI/terminal_menu
 @onready var shipping_menu = $UI/shipping_menu
+@onready var player = $Player
 
 
 #playermenu vars
@@ -17,6 +18,8 @@ func _ready():
 	#signal connects
 	Signals.connect("toggle_player_menu", toggle_player_menu)
 	Signals.connect("player_interact", interact)
+	
+	player_menu.set_player_inventory_data(player.inventory)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

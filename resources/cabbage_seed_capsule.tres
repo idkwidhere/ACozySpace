@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cgu8lgptaikh"]
+
+[ext_resource type="Script" path="res://scripts/ItemData.gd" id="1_b7n61"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0b7mb"]
+load_path = "res://.godot/imported/seed_capsule_atlas.png-2d7b2ed0ff1bb7313a7b0a309372f67f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hub17"]
+atlas = SubResource("CompressedTexture2D_0b7mb")
+region = Rect2(48, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_b7n61")
+type = 0
+stackable = true
+name = "Cabbage Seeds"
+item_description = "Crunchy and green!"
+item_texture = SubResource("AtlasTexture_hub17")

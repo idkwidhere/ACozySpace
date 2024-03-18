@@ -4,7 +4,7 @@ class_name Player
 const SPEED = 300.0
 var accel = 50
 @onready var player_sprite = $PlayerSprite
-
+@export var inventory: InventoryData
 
 #ui stuff??
 var menu_open = false

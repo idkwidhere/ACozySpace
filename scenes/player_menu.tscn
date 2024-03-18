@@ -1,26 +1,22 @@
-[gd_scene format=3 uid="uid://dbs4l6tkrawt8"]
+[gd_scene load_steps=3 format=3 uid="uid://dbs4l6tkrawt8"]
+
+[ext_resource type="Script" path="res://scripts/player_menu.gd" id="1_fsdlo"]
+[ext_resource type="PackedScene" uid="uid://dxvsv0daenv7i" path="res://inventory/inventory.tscn" id="1_rhxqj"]
 
 [node name="player_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 18.0
-offset_top = 629.0
-offset_right = 18.0
-offset_bottom = 79.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_fsdlo")
 
-[node name="menu_tabs" type="TabContainer" parent="."]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 238.0
-offset_top = -586.0
-offset_right = -274.0
-offset_bottom = -202.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PlayerInventory" parent="." instance=ExtResource("1_rhxqj")]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
