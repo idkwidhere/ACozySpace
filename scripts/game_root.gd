@@ -27,7 +27,8 @@ func interact(type):
 	if type == "terminal":
 		terminal_menu_open = !terminal_menu_open
 		terminal_menu.visible = !terminal_menu.visible
-	
+
+
 	if type == "shipping_box":
 		shipping_menu_open = !shipping_menu_open
 		shipping_menu.visible = !shipping_menu.visible

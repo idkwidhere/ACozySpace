@@ -10,5 +10,3 @@ enum Type {SEED_CAPSULE, CROP, TOOL, MAIN}
 @export var name: String
 @export_multiline var item_description: String
 @export var item_texture : Texture2D
-
-
