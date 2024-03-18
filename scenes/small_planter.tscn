@@ -25,67 +25,19 @@ shape = SubResource("RectangleShape2D_nwiqa")
 [node name="Seeds" type="Node2D" parent="."]
 
 [node name="Seed1" type="Marker2D" parent="Seeds"]
-position = Vector2(-24.3333, -2.33333)
+position = Vector2(-20.3333, 2.33333)
 scale = Vector2(3, 3)
 
 [node name="Seed2" type="Marker2D" parent="Seeds"]
-position = Vector2(-17.3333, -2.33333)
+position = Vector2(-6, 2.33333)
 scale = Vector2(3, 3)
 
 [node name="Seed3" type="Marker2D" parent="Seeds"]
-position = Vector2(-10, -2.33333)
+position = Vector2(8.33333, 2.33333)
 scale = Vector2(3, 3)
 
 [node name="Seed4" type="Marker2D" parent="Seeds"]
-position = Vector2(-3.33333, -2.33333)
-scale = Vector2(3, 3)
-
-[node name="Seed5" type="Marker2D" parent="Seeds"]
-position = Vector2(3.66667, -2.33333)
-scale = Vector2(3, 3)
-
-[node name="Seed6" type="Marker2D" parent="Seeds"]
-position = Vector2(11, -2.33333)
-scale = Vector2(3, 3)
-
-[node name="Seed7" type="Marker2D" parent="Seeds"]
-position = Vector2(17.6667, -2.33333)
-scale = Vector2(3, 3)
-
-[node name="Seed8" type="Marker2D" parent="Seeds"]
-position = Vector2(24.6667, -2.33333)
-scale = Vector2(3, 3)
-
-[node name="Seed9" type="Marker2D" parent="Seeds"]
-position = Vector2(-24.3333, 4.66667)
-scale = Vector2(3, 3)
-
-[node name="Seed10" type="Marker2D" parent="Seeds"]
-position = Vector2(-17.3333, 4.66667)
-scale = Vector2(3, 3)
-
-[node name="Seed11" type="Marker2D" parent="Seeds"]
-position = Vector2(-10, 4.66667)
-scale = Vector2(3, 3)
-
-[node name="Seed12" type="Marker2D" parent="Seeds"]
-position = Vector2(-3.33333, 4.66667)
-scale = Vector2(3, 3)
-
-[node name="Seed13" type="Marker2D" parent="Seeds"]
-position = Vector2(3.66667, 4.66667)
-scale = Vector2(3, 3)
-
-[node name="Seed14" type="Marker2D" parent="Seeds"]
-position = Vector2(11, 4.66667)
-scale = Vector2(3, 3)
-
-[node name="Seed15" type="Marker2D" parent="Seeds"]
-position = Vector2(17.6667, 4.66667)
-scale = Vector2(3, 3)
-
-[node name="Seed16" type="Marker2D" parent="Seeds"]
-position = Vector2(24.6667, 4.66667)
+position = Vector2(22.3333, 2.33333)
 scale = Vector2(3, 3)
 
 [node name="InteractArea" type="Area2D" parent="."]
