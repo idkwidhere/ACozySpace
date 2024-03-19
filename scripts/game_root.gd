@@ -20,6 +20,9 @@ func _ready():
 	Signals.connect("player_interact", interact)
 	
 	player_menu.set_player_inventory_data(player.inventory)
+	
+	for node in get_tree().get_nodes_in_group("seedbox_inventory"):
+		pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
